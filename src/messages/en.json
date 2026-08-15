@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "uses": "Stack",
+    "contact": "Contact",
+    "themeToggleDark": "Dark",
+    "themeToggleLight": "Light",
+    "themeAria": "toggle theme",
+    "langAria": "change language",
+    "ariaPrimary": "Primary navigation",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "eyebrowLabel": "Portfolio",
+    "eyebrowLocation": "Dakar",
+    "available": "Available",
+    "firstName": "Arona",
+    "lastName": "Tounkara.",
+    "lede": "Fullstack developer and co-founder, based in Dakar — I design and ship web products, from spec to server.",
+    "desc": "Three years writing Laravel, React/Next.js and Node.js for Senegalese and international startups. Currently backend lead at Société Africaine de Pétrole, co-founder at Teranga Dev and Nurapic.",
+    "ctaPrimary": "See my work",
+    "ctaSecondary": "Get in touch"
+  },
+  "work": {
+    "sectionTitle": "Selected",
+    "sectionTitleAccent": "work",
+    "sectionMeta": "Four projects · 2024—2026",
+    "seeAll": "All projects",
+    "caseStudy": "View project",
+    "statusProduction": "In production",
+    "statusTests": "In testing",
+    "statusDev": "In development",
+    "pageTitle": "Work",
+    "pageEyebrow": "Full",
+    "pageTitleAccent": "selection",
+    "pageDescription": "Every project I've worked on — shipped, testing or in development.",
+    "pageMeta": "Six projects · 2024—2026"
+  },
+  "ventures": {
+    "sectionTitle": "Two",
+    "sectionTitleAccent": "ventures",
+    "sectionMeta": "I co-run",
+    "teranga": {
+      "name": "Teranga",
+      "nameAccent": "Dev",
+      "role": "Co-founder · Software engineer",
+      "text": "Senegalese product studio founded in 2023. We design and ship SaaS products and custom client sites — from the first mockup to the production server. Four in-house products shipped so far, including Creneau and Ticket-Events.",
+      "link": "terangadev.com"
+    },
+    "nurapic": {
+      "name": "Nurapic",
+      "role": "Co-founder · Tech lead",
+      "text": "Event photography startup with a facial recognition engine. Co-founded with a business developer and a photographer. In production, built by Teranga Dev.",
+      "link": "nurapic.com"
+    }
+  },
+  "about": {
+    "sectionTitle": "About",
+    "sectionTitleAccent": "me",
+    "sectionMeta": "Condensed path",
+    "bio1": "I've been a dev since ESTM. I started with networks and sysadmin, then switched to web and never really left.",
+    "bio2": "These days I ship — Laravel APIs, React frontends, some Python FastAPI when needed, Docker and CI/CD to keep it all running. What I genuinely enjoy is designing a product with someone and getting it all the way to users.",
+    "bio3": "Based in Dakar, open to jobs and gigs — locally, remotely, or internationally.",
+    "cvLinkText": "Download CV"
+  },
+  "contact": {
+    "sectionTitle": "Let's",
+    "sectionTitleAccent": "talk",
+    "sectionTitleQ": ".",
+    "text": "Open to full-time roles (locally, remotely, or internationally), freelance work, and product collaborations. Email is the fastest way to reach me — I reply within 48 hours.",
+    "phone": "+221 78 136 78 45"
+  },
+  "footer": {
+    "copyright": "© 2026 Arona Tounkara",
+    "location": "Written and shipped from Dakar",
+    "stackLink": "Stack",
+    "backToTop": "Back to top ↑"
+  },
+  "workPage": {
+    "eyebrow": "Work",
+    "title": "Everything I've",
+    "titleAccent": "shipped",
+    "intro": "SaaS products, internal platforms and client sites — shipped, testing or in progress. Each project on its own page.",
+    "meta": "2024 — present"
+  },
+  "projectDetail": {
+    "back": "All projects",
+    "roleLabel": "Role",
+    "statusLabel": "Status",
+    "yearsLabel": "Timeline",
+    "stackLabel": "Tech stack",
+    "visit": "Visit the live site",
+    "overview": "Overview",
+    "nextLabel": "Next project",
+    "eyebrow": "Project"
+  },
+  "aboutPage": {
+    "eyebrow": "About",
+    "title": "Arona",
+    "titleAccent": "Tounkara",
+    "lead": "Fullstack developer and co-founder, based in Dakar. I design, build and ship — from the first spec all the way to the production server.",
+    "journeyHeading": "Path",
+    "journeyMeta": "2022 — present",
+    "skillsHeading": "Skills",
+    "skillsMeta": "What I use",
+    "certsHeading": "Certifications",
+    "languagesHeading": "Languages",
+    "languagesValue": "French (fluent) · English (working proficiency) · Wolof · Bambara",
+    "ctaText": "The full CV is available as a PDF.",
+    "cvLink": "Download CV"
+  },
+  "certifications": {
+    "c1": "NDG Linux Essentials — Cisco Networking Academy",
+    "c2": "Frontend Bootstrap — Sonatel Academy",
+    "c3": "Claude Code in Action — Anthropic (in progress, 2026)"
+  },
+  "usesPage": {
+    "eyebrow": "Stack",
+    "title": "What I",
+    "titleAccent": "build with",
+    "intro": "The languages, frameworks and tools I use day to day to design, build and deploy.",
+    "meta": "Updated · 2026"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Let's",
+    "titleAccent": "talk",
+    "titleEnd": ".",
+    "intro": "Open to full-time roles (locally, remotely, or internationally), freelance work, and product collaborations. Email is the fastest way to reach me — I reply within 48 hours.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "elsewhereLabel": "Elsewhere",
+    "cvLabel": "CV",
+    "cvValue": "Download PDF"
+  }
+}

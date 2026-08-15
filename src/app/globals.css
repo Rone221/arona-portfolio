@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
+/* Dark-variant driven by data-theme attribute (set by next-themes) */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ─── Design tokens (mapped to Tailwind theme) ────────────────────────── */
+@theme {
+  --font-serif: var(--font-newsreader), "Iowan Old Style", "Palatino Linotype",
+                "Palatino LT STD", "Book Antiqua", Palatino, "URW Palladio L",
+                P052, Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               "Segoe UI Variable Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+  --color-bg:       var(--bg);
+  --color-fg:       var(--fg);
+  --color-fg-soft:  var(--fg-soft);
+  --color-muted:    var(--muted);
+  --color-muted-2:  var(--muted-2);
+  --color-rule:     var(--rule);
+  --color-rule-2:   var(--rule-2);
+  --color-accent:   var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-wash:     var(--wash);
+}
+
+/* ─── Light palette (default) ──────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:      #FFFFFF;
+  --fg:      #0A0F1A;
+  --fg-soft: #2A3244;
+  --muted:   #5B6472;   /* darkened → 5.6:1 on white (was #6B7280 4.83) */
+  --muted-2: #6E7686;   /* darkened → 4.5:1, usable for numerals/icons (was #9CA3AF 2.54) */
+  --rule:    #D5D9DF;   /* one notch stronger */
+  --rule-2:  #C3C9D2;
+  --accent:  #1D4ED8;
+  --accent-2:#1E40AF;
+  --wash:    #EEF1F5;   /* perceptible vs white */
+  color-scheme: light dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark palette when system prefers dark AND user has not explicitly chosen light */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg:      #080F1F;
+    --fg:      #EEF1F6;
+    --fg-soft: #C7CEDA;
+    --muted:   #939CAF;   /* lifted → ~7:1 on #080F1F */
+    --muted-2: #7A8296;   /* lifted → ~4.6:1, usable for numerals/icons */
+    --rule:    #232E44;   /* one notch stronger */
+    --rule-2:  #2E3A52;
+    --accent:  #93C5FD;
+    --accent-2:#BFDBFE;
+    --wash:    #152343;   /* perceptible vs #080F1F */
   }
 }
 
+/* Explicit dark stamp wins over media query */
+:root[data-theme="dark"] {
+  --bg:      #080F1F;
+  --fg:      #EEF1F6;
+  --fg-soft: #C7CEDA;
+  --muted:   #939CAF;
+  --muted-2: #7A8296;
+  --rule:    #232E44;
+  --rule-2:  #2E3A52;
+  --accent:  #93C5FD;
+  --accent-2:#BFDBFE;
+  --wash:    #152343;
+}
+
+/* ─── Base ─────────────────────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 16.5px;
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a { color: inherit; text-decoration: none; }
+
+/* Visible focus for every interactive element (links AND buttons) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+/* main receives focus from skip-link without a persistent ring */
+main:focus { outline: none; }
+
+/* Typographic niceties */
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+
+/* Utility used only where Tailwind doesn't reach naturally */
+.container-narrow { max-width: 780px; margin-inline: auto; padding-inline: 40px; }
+.container-wide   { max-width: 1120px; margin-inline: auto; padding-inline: 40px; }
+
+@media (max-width: 640px) {
+  .container-narrow,
+  .container-wide { padding-inline: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }
